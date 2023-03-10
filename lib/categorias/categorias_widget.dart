@@ -48,13 +48,21 @@ class _CategoriasWidgetState extends State<CategoriasWidget> {
       appBar: AppBar(
         backgroundColor: FlutterFlowTheme.of(context).primaryColor,
         automaticallyImplyLeading: false,
-        title: Text(
-          'Categorías',
-          style: FlutterFlowTheme.of(context).title2.override(
-                fontFamily: 'Poppins',
-                color: Colors.white,
-                fontSize: 22.0,
-              ),
+        title: InkWell(
+          onTap: () async {
+            GoRouter.of(context).prepareAuthEvent();
+            await signOut();
+
+            context.goNamedAuth('login', mounted);
+          },
+          child: Text(
+            'Categorías',
+            style: FlutterFlowTheme.of(context).title2.override(
+                  fontFamily: 'Poppins',
+                  color: Colors.white,
+                  fontSize: 22.0,
+                ),
+          ),
         ),
         actions: [],
         centerTitle: false,
