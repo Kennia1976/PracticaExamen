@@ -1,0 +1,18 @@
+{
+  "indexes": [
+    {
+      "collectionGroup": "Producto",
+      "queryScope": "COLLECTION",
+      "fields": [
+        {
+          "fieldPath": "llaveCategoria",
+          "order": "ASCENDING"
+        },
+        {
+          "fieldPath": "nombre",
+          "order": "DESCENDING"
+        }
+      ]
+    }
+  ]
+}
